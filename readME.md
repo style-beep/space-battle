@@ -9,7 +9,7 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://ecma-international.org/)
 
 ![Game Preview] 
-(img/screen1.png)
+img src=img/screen1.png
 </div>
 
 ---
@@ -65,6 +65,7 @@ cd space-battle
 
 # Откройте index.html в браузере
 # (просто дважды кликните или используйте Live Server)
+```
 
 🛠️ ТЕХНОЛОГИИ
 HTML5 Canvas — рендеринг графики
