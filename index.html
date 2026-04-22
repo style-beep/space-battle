@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>✨ space battle | КОСМИЧЕСКАЯ АРКАДА</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50' y='85' font-size='85' text-anchor='middle' fill='%230ff'>✨</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="game-wrapper">
+    <div class="game-card">
+        <div class="canvas-container">
+            <canvas id="gameCanvas" width="1000" height="600"></canvas>
+        </div>
+        
+        <div class="dashboard">
+            <div class="stats-group">
+                <div class="stat-item">
+                    <span class="stat-icon">🎯</span>
+                    <div class="stat-label">СЧЁТ</div>
+                    <div class="stat-number" id="scoreValue">0</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-icon">💙</span>
+                    <div class="stat-label">ЖИЗНИ</div>
+                    <div class="stat-number" id="livesValue">3</div>
+                </div>
+            </div>
+            
+            <button class="settings-btn" id="settingsBtn">⚙️</button>
+            <button class="restart-btn" id="restartButton">⟳</button>
+        </div>
+        
+        <div class="controls-info">
+            <span>← → / A D — УПРАВЛЕНИЕ</span>
+            <span>✦</span>
+            <span>МЫШЬ / ТАЧ — НАВЕДЕНИЕ</span>
+            <span>✦</span>
+            <span>R — РЕСТАРТ</span>
+            <span>✦</span>
+            <span>⚙️ — НАСТРОЙКИ</span>
+        </div>
+    </div>
+</div>
+
+<div class="stars" id="starsContainer"></div>
+
+<!-- Панель настроек -->
+<div class="settings-overlay" id="settingsOverlay">
+    <div class="settings-panel" id="settingsPanel">
+        <div class="settings-header">
+            <h3>⚡ НАСТРОЙКИ СЛОЖНОСТИ</h3>
+            <button class="close-settings" id="closeSettings">✕</button>
+        </div>
+        
+        <div class="difficulty-options">
+            <div class="difficulty-card" data-difficulty="easy">
+                <div class="difficulty-icon">🌿</div>
+                <div class="difficulty-name">ЛЕГКО</div>
+                <div class="difficulty-desc">Для новичков</div>
+                <div class="difficulty-stats">
+                    <span>🐌 Медленные враги</span>
+                    <span>❤️ 5 жизней</span>
+                    <span>🔄 Бесконечный режим</span>
+                </div>
+            </div>
+            
+            <div class="difficulty-card" data-difficulty="normal">
+                <div class="difficulty-icon">⚡</div>
+                <div class="difficulty-name">НОРМАЛЬНО</div>
+                <div class="difficulty-desc">Классический опыт</div>
+                <div class="difficulty-stats">
+                    <span>⚡ Средняя скорость</span>
+                    <span>❤️ 4 жизни</span>
+                    <span>🔄 Бесконечный режим</span>
+                </div>
+            </div>
+            
+            <div class="difficulty-card" data-difficulty="hard">
+                <div class="difficulty-icon">🔥</div>
+                <div class="difficulty-name">СЛОЖНО</div>
+                <div class="difficulty-desc">Для опытных</div>
+                <div class="difficulty-stats">
+                    <span>💨 Быстрые враги</span>
+                    <span>❤️ 3 жизни</span>
+                    <span>🔄 Бесконечный режим</span>
+                </div>
+            </div>
+            
+            <div class="difficulty-card" data-difficulty="insane">
+                <div class="difficulty-icon">💀</div>
+                <div class="difficulty-name">БЕЗУМИЕ</div>
+                <div class="difficulty-desc">Только для богов</div>
+                <div class="difficulty-stats">
+                    <span>🌀 Сверхзвук</span>
+                    <span>❤️ 2 жизни</span>
+                    <span>🔄 Бесконечный режим</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mode-option">
+            <label class="mode-switch">
+                <input type="checkbox" id="endlessModeToggle">
+                <span class="mode-slider"></span>
+                <span class="mode-label">♾️ БЕСКОНЕЧНЫЙ РЕЖИМ</span>
+            </label>
+            <div class="mode-description">В бесконечном режиме игра не заканчивается, а сложность постоянно растёт!</div>
+        </div>
+        
+        <div class="current-difficulty">
+            ТЕКУЩАЯ СЛОЖНОСТЬ: <span id="currentDifficulty">НОРМАЛЬ</span>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
