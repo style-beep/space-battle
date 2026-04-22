@@ -18,7 +18,6 @@
 |----------------|-----------------|
 | ![Gameplay](img/screen1.png) | ![Settings](img/screen2.png) |
 
-</div>
 
 ---
 
