@@ -8,8 +8,7 @@
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://www.w3.org/Style/CSS/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://ecma-international.org/)
 
-![Game Preview] 
-(img/screen1.png)
+![Game Preview] (img/screen1.png)
 </div>
 
 ---
